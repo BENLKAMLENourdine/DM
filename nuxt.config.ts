@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         inject: true
       }
     }],
+    '@pinia/nuxt'
   ],
   ssr: true,
   runtimeConfig: {
