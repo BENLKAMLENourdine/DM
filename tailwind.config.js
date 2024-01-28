@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         red: {
-          500: '#ED4F3F'
+          500: '#ED3F3F'
         },
         primary: {
           0: '#FFFFFF',
@@ -14,7 +14,7 @@ export default {
         secondary: {
           0: '#90A3BF',
           500: '#596780',
-          800: '#1A202C',
+          800: '#1A202C'
         },
         information: {
           500: '#54A6FF'
