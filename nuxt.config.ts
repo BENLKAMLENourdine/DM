@@ -14,6 +14,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
   ssr: true,
+  pinia: {
+    storesDirs: ["./stores/**"],
+  },
   runtimeConfig: {
     public: {
       API_BASE_URL: process.env.API_BASE_URL

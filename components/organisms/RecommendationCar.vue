@@ -13,7 +13,7 @@
                 :id="car.id" />
         </div>
         <div class="flex justify-center mt-10">
-            <AtomsButton class="bg-primary-500 text-primary-0 py-2 px-6 rounded" @button-clicked="">
+            <AtomsButton v-if="!limit && !store.noMoreCars" class="bg-primary-500 text-primary-0 py-2 px-6 rounded" @button-clicked="async () => await store.showMore()">
                 Show more cars
             </AtomsButton>
         </div>
@@ -22,11 +22,16 @@
 
 <script setup lang="ts">
 import type { Car } from '../molecules/CatalogCar.vue';
+const store = useCarsStore()
+
 
 export interface RecommendationCarProps {
   title: string,
-  recommendationCars: Array<Car>
+  recommendationCars: Array<Car>,
+  limit: boolean
 }
 
-const props = defineProps<RecommendationCarProps>()
+const props = withDefaults(defineProps<RecommendationCarProps>(), {
+    limit: false
+})
 </script>

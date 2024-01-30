@@ -8,9 +8,10 @@
 <script setup lang="ts">
 import type { Car } from '../molecules/CatalogCar.vue';
 
-export interface CarsProps {
+export interface CatalogCarsProps {
   popularCars: Array<Car>,
   recommendationCars: Array<Car>
 }
 
-const props = defineProps<CarsProps>()</script>
+const props = defineProps<CatalogCarsProps>()
+</script>

@@ -1,92 +1,15 @@
 <template>
     <div class="mx-auto px-8 md:px-16 bg-backgd-500 pt-6 pb-12">
         <OrganismsCarDetailsFrame />
-        <OrganismsRecommendationCar :title="'Recommendation Cars'" :recommendation-cars="rcars"/>
+        <OrganismsRecommendationCar :title="'Recommendation Cars'" :recommendation-cars="store.recommendationCars" :limit="true"/>
     </div>
 </template>
 
 <script setup lang="ts">
+const route = useRoute()
+const id = Array.isArray(route.params.id) ? route.params.id[0] : route.params.id;
+const store = useCarsStore()
 
-const rcars = [
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    }
-]
+await store.fetchCarDetails(id)
+await store.fetchCars()
 </script>
