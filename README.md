@@ -8,7 +8,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 2. Start implementing the UI/UX in nuxt3 following the Atomic design (Divide components into Atoms, Molecules, Organisms, Templates and Pages)
 3. Use Static data for a minimalist working app
 4. Start building the HTTP server
-5. Implemente the communication between the server and the app using pinia for state management
+5. Implement the communication between the server and the app using pinia for state management
    
 ## Setup
 
