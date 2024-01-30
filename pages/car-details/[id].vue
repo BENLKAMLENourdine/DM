@@ -1,67 +1,11 @@
 <template>
     <div class="mx-auto px-8 md:px-16 bg-backgd-500 pt-6 pb-12">
-        <div class="grid grid-cols-2 gap-4 mb-6">
-            <OrganismsAd text="The Best Platform<br> for Car Rental"
-                         description="Ease of doing a car rental safely and<br> reliably. Of course at a low price."
-                         background-image="bg1"
-                         button-bg-color="bg-primary-500"
-                         background-color="bg-information-500"
-                         class="col-span-2 md:col-span-1"/>
-            <OrganismsAd text="Easy way to rent a<br> car at a low price"
-            description="Providing cheap car rental services<br> and safe and comfortable facilities."
-            background-image="bg2"
-            button-bg-color="bg-information-500"
-            background-color="bg-primary-500"
-            class="hidden md:block" />
-        </div>
-        <OrganismsCatalogCar :popular-cars="cars" :recommendation-cars="rcars"/>
+        <OrganismsCarDetailsFrame />
+        <OrganismsRecommendationCar :title="'Recommendation Cars'" :recommendation-cars="rcars"/>
     </div>
 </template>
 
 <script setup lang="ts">
-
-const cars = [
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    },
-    {
-        name: "Toyota Camry",
-        type: "Sedan",
-        gasolineLiter: 60,
-        kindOfTransition: "Automatic",
-        people: 5,
-        pricePerDay: 50,
-        id: "toyota-camry",
-        img: "https://dm-assignment-commonshare.koyeb.app/img/35.png"
-    }
-]
 
 const rcars = [
     {

@@ -8,10 +8,13 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-    color: {
-        type: String,
-        default: 'currentColor'
-    }
+
+export interface Props {
+  color?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  color: 'currentColor',
 })
+
 </script>

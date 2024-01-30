@@ -1,4 +1,5 @@
 <template>
-    <header>kl</header>
+    <OrganismsNavBarTop />
     <slot></slot>
+    <OrganismsFooter />
 </template>

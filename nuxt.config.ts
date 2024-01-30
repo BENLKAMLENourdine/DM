@@ -10,7 +10,8 @@ export default defineNuxtConfig({
         inject: true
       }
     }],
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxt/image',
   ],
   ssr: true,
   runtimeConfig: {
