@@ -11,6 +11,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 5. Implement the communication between the server and the app using pinia for state management
    
 ## Setup
+Create a .env file at the root of the project and place the content of .env.example in it
 
 Make sure to install the dependencies:
 
